@@ -35,7 +35,7 @@ export function QuestLog({ quests, visible, onClose }: QuestLogProps) {
                       {quest.objectives.map((obj) => (
                         <View key={obj.id} style={styles.objective}>
                           <Text style={styles.objectiveText}>
-                            {obj.completed ? '✓' : '○'} {obj.description}
+                            {obj.current >= obj.required ? '✓' : '○'} {obj.description}
                           </Text>
                           <Text style={styles.progress}>
                             {obj.current}/{obj.required}

@@ -68,12 +68,12 @@ export function GameScreen() {
   const handleGameTap = (event: any) => {
     const { locationX, locationY } = event.nativeEvent;
     
-    // Check if tapping on an NPC
+    // Check if tapping on an NPC (increased radius for better mobile interaction)
     const tappedNPC = gameState.npcs.find((npc) => {
       const distance = Math.sqrt(
         Math.pow(npc.position.x - locationX, 2) + Math.pow(npc.position.y - locationY, 2)
       );
-      return distance < 30;
+      return distance < 50;
     });
 
     if (tappedNPC) {
@@ -265,10 +265,11 @@ const styles = StyleSheet.create({
   npc: {
     position: 'absolute',
     alignItems: 'center',
-    width: 80,
+    width: 100,
+    padding: 5,
   },
   npcIcon: {
-    fontSize: 28,
+    fontSize: 32,
   },
   npcName: {
     fontSize: 10,
