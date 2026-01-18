@@ -40,17 +40,36 @@ npm run web
 ```
 This will start the development server and open the game in your browser.
 
-#### iOS
+#### Mobile Preview with Expo Go
+
+The easiest way to test on mobile without building:
+
+1. Install **Expo Go** app on your device:
+   - [iOS App Store](https://apps.apple.com/app/expo-go/id982107779)
+   - [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent)
+
+2. Start the development server:
+```bash
+npm start
+```
+
+3. Scan the QR code:
+   - **iOS**: Open Camera app and scan the QR code
+   - **Android**: Open Expo Go app and scan the QR code
+
+The game will load directly on your device for testing!
+
+#### iOS (Native Build)
 ```bash
 npm run ios
 ```
-Requires macOS with Xcode installed, or use Expo Go app on your device.
+Requires macOS with Xcode installed.
 
-#### Android
+#### Android (Native Build)
 ```bash
 npm run android
 ```
-Requires Android Studio or use Expo Go app on your device.
+Requires Android Studio.
 
 ## How to Play
 
