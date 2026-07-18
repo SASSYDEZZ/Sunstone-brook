@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { FONTS, GAME_HEIGHT, GAME_WIDTH, PALETTE } from '../config';
+import { FONTS, GAME_HEIGHT, GAME_WIDTH, PALETTE, TEXT_COLOR } from '../config';
 
 const WALK_SPEED = 260;
 const FLOOR_Y = 560;
@@ -34,7 +34,7 @@ export class LobbyScene extends Phaser.Scene {
       .text(GAME_WIDTH / 2, 40, 'The Lobby — restoration pending', {
         fontFamily: FONTS.heading,
         fontSize: '28px',
-        color: '#f3d9a4',
+        color: TEXT_COLOR.candlelight,
       })
       .setOrigin(0.5);
 
@@ -42,7 +42,7 @@ export class LobbyScene extends Phaser.Scene {
       .text(GAME_WIDTH / 2, GAME_HEIGHT - 28, 'Arrow keys to walk · ESC to return to the title', {
         fontFamily: FONTS.body,
         fontSize: '16px',
-        color: '#8a7a5f',
+        color: TEXT_COLOR.muted,
       })
       .setOrigin(0.5);
 
@@ -51,7 +51,7 @@ export class LobbyScene extends Phaser.Scene {
         fontFamily: FONTS.body,
         fontSize: '18px',
         fontStyle: 'italic',
-        color: '#f7ecd9',
+        color: TEXT_COLOR.body,
       })
       .setOrigin(0.5)
       .setAlpha(0);
@@ -151,7 +151,7 @@ export class LobbyScene extends Phaser.Scene {
       .text(930, 500, 'FRONT DESK', {
         fontFamily: FONTS.heading,
         fontSize: '16px',
-        color: '#d4a35b',
+        color: TEXT_COLOR.brass,
       })
       .setOrigin(0.5);
   }
@@ -170,7 +170,7 @@ export class LobbyScene extends Phaser.Scene {
       .text(0, -140, 'Elias Vane', {
         fontFamily: FONTS.body,
         fontSize: '14px',
-        color: '#f7ecd9',
+        color: TEXT_COLOR.body,
       })
       .setOrigin(0.5);
 

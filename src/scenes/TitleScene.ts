@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { FONTS, GAME_HEIGHT, GAME_WIDTH, PALETTE } from '../config';
+import { FONTS, GAME_HEIGHT, GAME_WIDTH, PALETTE, TEXT_COLOR } from '../config';
 
 export class TitleScene extends Phaser.Scene {
   constructor() {
@@ -26,7 +26,7 @@ export class TitleScene extends Phaser.Scene {
       .text(cx, 190, 'THE VANE GRAND HOTEL', {
         fontFamily: FONTS.heading,
         fontSize: '64px',
-        color: '#f3d9a4',
+        color: TEXT_COLOR.candlelight,
       })
       .setOrigin(0.5);
 
@@ -35,7 +35,7 @@ export class TitleScene extends Phaser.Scene {
         fontFamily: FONTS.body,
         fontSize: '22px',
         fontStyle: 'italic',
-        color: '#d4a35b',
+        color: TEXT_COLOR.brass,
       })
       .setOrigin(0.5);
 
@@ -43,7 +43,7 @@ export class TitleScene extends Phaser.Scene {
       .text(cx, 480, 'Press SPACE or click to step inside', {
         fontFamily: FONTS.body,
         fontSize: '24px',
-        color: '#f7ecd9',
+        color: TEXT_COLOR.body,
       })
       .setOrigin(0.5);
     this.tweens.add({
@@ -59,7 +59,7 @@ export class TitleScene extends Phaser.Scene {
       .text(cx, GAME_HEIGHT - 40, 'TriandTru Games — prototype v0.0.1', {
         fontFamily: FONTS.body,
         fontSize: '16px',
-        color: '#54382a',
+        color: TEXT_COLOR.walnut,
       })
       .setOrigin(0.5);
 

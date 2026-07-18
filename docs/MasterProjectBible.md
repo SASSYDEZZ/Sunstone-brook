@@ -96,24 +96,35 @@ front desk is the visual anchor for this system.
 
 - **Style:** Hand-painted storybook; painterly 2D with layered depth/parallax; warm luxury; cozy cinematic lighting
 - **Inspirations (tone only):** Ni no Kuni, Spiritfarer, Grand Budapest Hotel, historic luxury hotels
-- **Prototype palette** (mirrored in `src/config.ts`):
+- **Official palette** — the locked Brand Bible swatches, the single source
+  of colour truth, mirrored in `src/config.ts` as `BRAND` (earlier builds
+  carried eyeballed approximations; those are retired):
 
-| Name        | Hex       | Use                       |
-| ----------- | --------- | ------------------------- |
-| night       | `#1a1410` | Deep shadows, backgrounds |
-| mahogany    | `#3d2b1f` | Walls, wood               |
-| walnut      | `#54382a` | Wainscoting, furniture    |
-| velvet      | `#7a2e2e` | Upholstery, Elias's coat  |
-| brass       | `#d4a35b` | Fixtures, accents         |
-| candlelight | `#f3d9a4` | Light sources, headings   |
-| cream       | `#f7ecd9` | Marble, text, highlights  |
-| sage        | `#8a9a6b` | Plants, garden accents    |
+| Name           | Hex       | Group   |
+| -------------- | --------- | ------- |
+| Ivory          | `#F3E9D6` | Primary |
+| Warm Cream     | `#EAD7B8` | Primary |
+| Brass Gold     | `#C7A35A` | Primary |
+| Antique Bronze | `#7A6338` | Primary |
+| Walnut         | `#5B3A22` | Primary |
+| Burgundy       | `#7A1F2B` | Accent  |
+| Forest Green   | `#1F3B2E` | Accent  |
+| Deep Teal      | `#12325E` | Accent  |
+| Midnight Blue  | `#1A2232` | Accent  |
+| Slate Gray     | `#6A6B70` | Accent  |
+
+- **Semantic aliases** (`PALETTE` in `src/config.ts`) map the prototype's
+  scene roles onto the swatches above: night→Midnight Blue, mahogany→Walnut,
+  walnut→Antique Bronze, velvet→Burgundy, brass→Brass Gold,
+  candlelight→Warm Cream, cream→Ivory, sage→Forest Green.
 
 ---
 
 ## 6. UI/UX Bible
 
-- Serif typography (Georgia family in the prototype) for the storybook feel
+- Brand Bible typography: **Cinzel** SemiBold for headings/signage, **Lora**
+  for body — both self-hosted as WOFF2 (no CDN, CSP-safe; see `public/fonts/`
+  and the `@font-face` block in `index.html`), with a serif fallback stack
 - Gentle pulsing/fading tweens instead of hard cuts
 - Diegetic anchors where possible (the ledger _is_ the memory UI)
 
