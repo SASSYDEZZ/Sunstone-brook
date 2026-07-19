@@ -1,0 +1,29 @@
+{
+  "name": "the-vane-grand-hotel",
+  "private": true,
+  "version": "0.0.1",
+  "description": "The Vane Grand Hotel — a cozy narrative hotel management simulator by TriandTru Games",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "howler": "^2.2.4",
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.0",
+    "@types/howler": "^2.2.12",
+    "eslint": "^9.30.0",
+    "eslint-config-prettier": "^10.1.0",
+    "prettier": "^3.6.0",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.35.0",
+    "vite": "^7.0.0"
+  }
+}
